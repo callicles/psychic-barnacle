@@ -1,14 +1,14 @@
-import NextAuth from "next-auth"
-import DiscordProvider from "next-auth/providers/discord"
+import NextAuth from "next-auth";
+import DiscordProvider from "next-auth/providers/discord";
 
-import { Client as FaunaClient } from "faunadb"
-import { FaunaAdapter } from "@next-auth/fauna-adapter"
+import { Client as FaunaClient } from "faunadb";
+import { FaunaAdapter } from "@next-auth/fauna-adapter";
 
 const client = new FaunaClient({
   secret: process.env.FAUNA_SECRET || "",
   scheme: "https",
-  domain: "db.us.fauna.com"
-})
+  domain: "db.us.fauna.com",
+});
 
 export default NextAuth({
   // Configure one or more authentication providers
@@ -22,15 +22,16 @@ export default NextAuth({
   adapter: FaunaAdapter(client),
   callbacks: {
     async signIn({ user, account, profile, email, credentials }) {
-      const isAllowedToSignIn = !!user.id && (profile.email?.endsWith("nicolasjoseph.com") || false)
+      const isAllowedToSignIn =
+        !!user.id && (profile.email?.endsWith("nicolasjoseph.com") || false);
       if (isAllowedToSignIn) {
-        return true
+        return true;
       } else {
         // Return false to display a default error message
-        return false
+        return false;
         // Or you can return a URL to redirect to:
         // return '/unauthorized'
       }
-    }
-  }
-})
+    },
+  },
+});
