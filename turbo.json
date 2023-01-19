@@ -14,5 +14,6 @@
     "dev": {
       "cache": false
     }
-  }
+  },
+  "globalEnv": ["FAUNA_SECRET", "DISCORD_ID", "DISCORD_SECRET"]
 }
