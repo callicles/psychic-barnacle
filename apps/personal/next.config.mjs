@@ -1,17 +1,13 @@
-/** @type {import('next').NextConfig} */
-
 import nextMDX from '@next/mdx'
 import remarkGfm from 'remark-gfm'
 import rehypePrism from '@mapbox/rehype-prism'
-import remarkMath from 'remark-math'
-import rehypeKatex from 'rehype-katex'
 
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  pageExtensions: ['ts','tsx','mdx'],
+  pageExtensions: ['ts', 'tsx', 'mdx'],
   reactStrictMode: true,
   experimental: {
+    appDir: true,
     scrollRestoration: true,
   },
 }
@@ -19,8 +15,8 @@ const nextConfig = {
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkGfm, remarkMath],
-    rehypePlugins: [rehypePrism, rehypeKatex],
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypePrism],
   },
 })
 
