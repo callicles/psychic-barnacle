@@ -26,6 +26,7 @@ importers:
       '@types/react': ^18.0.17
       '@types/react-dom': ^18.0.6
       autoprefixer: ^10.4.13
+      clsx: ^1.2.1
       next: 13.1.2
       postcss: ^8.4.21
       postcss-focus-visible: ^7.1.0
@@ -46,6 +47,7 @@ importers:
       '@types/node': 18.11.18
       '@types/react': 18.0.27
       '@types/react-dom': 18.0.10
+      clsx: 1.2.1
       next: 13.1.2_biqbaboplfbrettd7655fr4n2y
       postcss-focus-visible: 7.1.0_postcss@8.4.21
       react: 18.2.0
@@ -1038,6 +1040,11 @@ packages:
     resolution: {integrity: sha512-ROoL94jJH2dUVML2Y/5PEDNaSHgeOdSDicUyS7izcF63G6sTc/FTjLub4b8Il9S8S0beOfYt0TaA5qvFK+w0wA==}
     dependencies:
       mimic-response: 1.0.1
+    dev: false
+
+  /clsx/1.2.1:
+    resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
     dev: false
 
   /color-convert/1.9.3:
