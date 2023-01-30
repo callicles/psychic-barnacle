@@ -20,6 +20,7 @@
     "@types/node": "18.11.18",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
+    "clsx": "^1.2.1",
     "next": "13.1.2",
     "postcss-focus-visible": "^7.1.0",
     "react": "^18.2.0",
