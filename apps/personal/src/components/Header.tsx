@@ -16,32 +16,32 @@ const products = [
   {
     name: 'Nike .Swoosh',
     description: "Nike's web 2.5 platform that celebrates commuities and creators.",
-    href: '#',
+    href: '/products/dotswoosh',
     icon: '/swoosh.svg',
   },
   {
     name: 'Datalogue',
     description: 'Enterprise Data Platform for new generation of cheap data meshes.',
-    href: '#',
+    href: '/products/datalogue',
     acquiredBy: "Nike",
     icon: '/datalogue_logo.png',
   },
   { name: 'Gitlinks',
    description: "Secure your software supply chain by ensuring maintained, secure and licensable open source.",
    acquiredBy: "Infor",
-   href: '#', 
+   href: '/products/gitlinks', 
    icon: '/gitlinks.png',
 
 },
   {
     name: 'Linkurious',
     description: "Enterprise Graph platform - Model and explore your data as a graph.",
-    href: '#',
+    href: '/products/linkurious',
     icon: '/linkurious.png',
   },
 ]
 const callsToAction = [
-  { name: 'View All Products', href: '#', icon: CheckCircleIcon },
+  { name: 'View All Products', href: '/products', icon: CheckCircleIcon },
 ]
 
 function classNames(...classes: string[]) {
@@ -55,7 +55,7 @@ export function Header() {
       <div className="relative z-20">
         <div className="mx-auto flex max-w-7xl items-center justify-between py-5 px-6 sm:py-4 md:justify-start md:space-x-10 lg:px-8">
           <div>
-            <a href="#" className="flex">
+            <a href="/" className="flex">
               <span className="sr-only">Nicolas Joseph</span>
               <img
                 className="h-8 w-auto sm:h-10 rounded-md"
