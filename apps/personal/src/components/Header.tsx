@@ -12,34 +12,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import Image from 'next/image'
-const products = [
-  {
-    name: 'Nike .Swoosh',
-    description: "Nike's web 2.5 platform that celebrates commuities and creators.",
-    href: '/products/dotswoosh',
-    icon: '/swoosh.svg',
-  },
-  {
-    name: 'Datalogue',
-    description: 'Enterprise Data Platform for new generation of cheap data meshes.',
-    href: '/products/datalogue',
-    acquiredBy: "Nike",
-    icon: '/datalogue_logo.png',
-  },
-  { name: 'Gitlinks',
-   description: "Secure your software supply chain by ensuring maintained, secure and licensable open source.",
-   acquiredBy: "Infor",
-   href: '/products/gitlinks', 
-   icon: '/gitlinks.png',
-
-},
-  {
-    name: 'Linkurious',
-    description: "Enterprise Graph platform - Model and explore your data as a graph.",
-    href: '/products/linkurious',
-    icon: '/linkurious.png',
-  },
-]
+import { products } from '../app/products/products'
 const callsToAction = [
   { name: 'View All Products', href: '/products', icon: CheckCircleIcon },
 ]
@@ -102,7 +75,7 @@ export function Header() {
                     >
                       <Popover.Panel className="absolute inset-x-0 top-full z-10 hidden transform bg-white shadow-lg md:block">
                         <div className="mx-auto grid max-w-7xl gap-y-6 px-4 py-6 sm:grid-cols-2 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-4 lg:px-8 lg:py-12 xl:py-16">
-                          {products.map((item) => (
+                          {products.slice(0, 4).map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
@@ -117,7 +90,7 @@ export function Header() {
                                 <div className="ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4">
                                   <div>
                                     <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                    <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                                    <p className="mt-1 text-sm text-gray-500">{item.summary}</p>
                                   </div>
                                   <p className="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">
                                     Learn more
