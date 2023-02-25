@@ -128,7 +128,40 @@ export const products: Product[] = [{
         href: '/products/linkurious',
         icon: '/linkurious.png',
         images: [],
-        pageContent: () => <></>
+        pageContent: () => <>
+          <p className="mt-8 text-lg text-gray-500">
+              Linkurious is a startup I joined in 2014 as employee #4. I worked on the 1.0 version of 
+              Linurious Enterpise, leading the front end implementation.
+          </p>
+        <div className="prose prose-indigo mt-5 text-gray-500">
+        <p>
+          Linkurious is a software company that provides a graph visualization and analysis 
+          platform called "Linkurious Enterprise". The platform enables users to visualize
+          and explore complex networks of data, such as social networks, IT systems, financial
+          transactions, and more.
+            </p>
+          <p>
+          Linkurious Enterprise allows users to import data from various sources, including databases,
+         spreadsheets, and graph databases, and visualize it as interactive graphs. 
+         Users can then apply various analysis tools and algorithms to explore the data,
+          identify patterns, and gain insights.
+          </p>
+
+          <p>
+          Linkurious Enterprise is used by organizations in various industries, such as finance, 
+          healthcare, cybersecurity, and law enforcement, to uncover hidden connections and
+          detect patterns in large datasets. The platform also includes features such as data
+          filtering, search, and collaboration tools to help teams work together effectively.
+          </p>
+
+          <p>
+            Some of the famous use case for Linukurious have been the 
+            <a href='https://www.icij.org/investigations/panama-papers/'>Panama Papers</a> or 
+            <a href='https://www.icij.org/investigations/swiss-leaks/explore-swiss-leaks-data/'> Swiiss Leaks</a>
+          </p>
+        </div>
+
+        </>
       },
 ]
 
