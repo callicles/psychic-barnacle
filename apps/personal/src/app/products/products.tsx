@@ -136,7 +136,7 @@ export const products: Product[] = [{
         <div className="prose prose-indigo mt-5 text-gray-500">
         <p>
           Linkurious is a software company that provides a graph visualization and analysis 
-          platform called "Linkurious Enterprise". The platform enables users to visualize
+          platform called &quot;Linkurious Enterprise&quot;. The platform enables users to visualize
           and explore complex networks of data, such as social networks, IT systems, financial
           transactions, and more.
             </p>
@@ -156,8 +156,8 @@ export const products: Product[] = [{
 
           <p>
             Some of the famous use case for Linukurious have been the 
-            <a href='https://www.icij.org/investigations/panama-papers/'>Panama Papers</a> or 
-            <a href='https://www.icij.org/investigations/swiss-leaks/explore-swiss-leaks-data/'> Swiiss Leaks</a>
+            <a href="https://www.icij.org/investigations/panama-papers/">Panama Papers</a> or 
+            <a href="https://www.icij.org/investigations/swiss-leaks/explore-swiss-leaks-data/"> Swiiss Leaks</a>
           </p>
         </div>
 
