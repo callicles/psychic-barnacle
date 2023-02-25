@@ -89,7 +89,36 @@ export const products: Product[] = [{
        href: '/products/gitlinks', 
        icon: '/gitlinks.png',
        images: [],
-       pageContent: () => <></>
+       pageContent: () => <>
+            <p className="mt-8 text-lg text-gray-500">
+                Gitlinks was a startup I co-founded in 2018. We were building a platform to secure the software supply chain.
+            </p>
+            <div className="prose prose-indigo mt-5 text-gray-500">
+              <p>
+              GitLinks is a software company that offers a solution to help manage open source software dependencies 
+              and ensure compliance with open source licenses.
+              </p>
+              <p>
+              When developers use open source libraries or frameworks in their projects, 
+              they need to comply with the terms of the licenses attached to those libraries. 
+              This can be a complex and time-consuming task, especially as projects grow and dependencies multiply.
+              </p>
+              <p>
+              Another aspect that is difficult to manage is the quality of the community around the open source.
+              Open source projects can be abandoned, or they can be compromised by malicious actors.
+              Documentation can grow stale and security vulnerabilities can go unpatched.
+              </p>
+              <p>
+              GitLinks offered a platform that can automatically detect open source components in a software project, 
+              track their licenses, and provide alerts when new vulnerabilities or license compliance issues arise. 
+              It will also track the quality, liveliness and breadth of the community around the open source project.
+              </p>
+              <p>
+              This can help development teams save time, reduce risk, and ensure that they
+               are using open source software in a compliant and secure way.
+              </p>
+            </div>
+       </>
     
     },
       {
