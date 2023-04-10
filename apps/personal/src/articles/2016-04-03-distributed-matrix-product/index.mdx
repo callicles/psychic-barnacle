@@ -20,7 +20,7 @@ export const meta = {
   author: 'Nicolas Joseph',
   date: '2016-04-03',
   title: 'Distributed Matrix product',
-  description: '',
+  description: 'This blog post explains matrix multiplication and dot products of matrices. It then discusses how to perform distributed matrix multiplication, which is useful in machine learning applications where large matrices may not fit into memory. The post explains how to segment the data into slices or submatrices, which can be assigned to different processors. The processors compute the dot product for each submatrix, and the results are then combined to produce the final output. The post provides detailed explanations and illustrations for each step of the process.',
 }
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
@@ -142,7 +142,7 @@ of the dot product of a subset of A & B submatrices.
 
 <Image src={img13} alt="" />
 
-$$ C_{1,1} = \sum_{i=1}^{\sqrt{p}} A_{1,i}B_{i,1} $$
+{/* $$ C_{1,1} = \sum_{i=1}^{\sqrt{p}} A_{1,i}B_{i,1} $$ */}
 
 That equation expresses the fact that, like before, we still need the entire
  row and column to compute the complete dot product for a square but the way 
@@ -154,10 +154,10 @@ Now what's needed to get the result of that computation ?
 Let's take processor 1 as an example, with a total of 4 processors. Then,
  in order to compute its submatrix of C, C(1,1), it needs A(1,1), B(1,1), A(1,2) and B(1,2):
 
-- $$ C(1,1) = A(1,1)B(1,1) + A(1,2)B(2,1) $$
+{/* - $$ C(1,1) = A(1,1)B(1,1) + A(1,2)B(2,1) $$
 - $$ C(1,2) = A(1,1)B(1,2) + A(1,2)B(2,2) $$
 - $$ C(2,1) = A(2,1)B(1,1) + A(2,2)B(2,1) $$
-- $$ C(2,2) = A(2,1)B(1,2) + A(2,2)B(2,2) $$
+- $$ C(2,2) = A(2,1)B(1,2) + A(2,2)B(2,2) $$ */}
 
 In order to have all those pieces we are going to play the same game as in 
 the previous algorithm. We are going to swap around the pieces of A and B so 

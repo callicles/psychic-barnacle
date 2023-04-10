@@ -1,13 +1,16 @@
-import nextMDX from '@next/mdx'
+import addMdx from '@next/mdx';
 import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
 import rehypePrism from '@mapbox/rehype-prism'
+import remarkImages from 'remark-images'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ['ts', 'tsx', 'mdx'],
+  pageExtensions: ['ts', 'tsx', "mdx"],
   reactStrictMode: true,
   experimental: {
     appDir: true,
+    mdxRs: true,
     scrollRestoration: true,
   },
   images: {
@@ -23,12 +26,13 @@ const nextConfig = {
   }
 }
 
-const withMDX = nextMDX({
+export default addMdx(nextConfig, {
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [remarkGfm, remarkMath, remarkImages],
     rehypePlugins: [rehypePrism],
-  },
-})
 
-export default withMDX(nextConfig)
+    // If you use `MDXProvider`, uncomment the following line.
+    // providerImportSource: "@mdx-js/react",
+  }
+})(nextConfig)
