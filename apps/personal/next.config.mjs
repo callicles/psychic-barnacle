@@ -10,15 +10,15 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     appDir: true,
-    mdxRs: true,
-    scrollRestoration: true,
+    // mdxRs: true,
+    // scrollRestoration: true,
   },
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: '"picsum.photos',
+        hostname: 'picsum.photos',
         port: '',
         pathname: '/**',
       },

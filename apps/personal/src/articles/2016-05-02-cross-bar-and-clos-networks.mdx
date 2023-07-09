@@ -1,13 +1,4 @@
 import { ArticleLayout } from 'src/components/ArticleLayout'
-import Image from 'next/image'
-
-import img1 from './1.png'
-import img2 from './2.png'
-import img3 from './3.png'
-import img4 from './4.png'
-import img5 from './5.png'
-import img6 from './6.png'
-import img7 from './7.png'
 
 export const meta = {
   author: 'Nicolas Joseph',
@@ -21,7 +12,8 @@ export default (props) => <ArticleLayout meta={meta} {...props} />
 The Internet is a network of computers: a web of machines connected with one another in a 
 seemingly random pattern.
 
-<Image src={img1} alt="" />
+
+![1](/images/blog/2016-05-02-cross-bar-and-clos-networks/1.png)
 
 But when you dive into the nitty gritty details of how the network is actually structured. 
 It is structured in a very interesting way. Instead of being connected directly to 
@@ -31,7 +23,8 @@ intermediate piece of hardware either called a router or a switch.
 let’s draw a parallel to the old days of the telephone. The internet works similarly to the phone operator,
 you’d make a request and the operator would connect you with someone else.
 
-<Image src={img2} alt="" />
+![2](/images/blog/2016-05-02-cross-bar-and-clos-networks/2.png)
+
 
 This is the piece of the puzzle we are going to look at: the switch. The switch 
 is the wiring that connects everything together.
@@ -43,7 +36,8 @@ Cross bars are one of the basic ways to connect 2 arrays of devices to each othe
  Think of it like a road grid. You need to connect 2 towns to 2 other towns with highways. 
  How would you do it ?
 
-<Image src={img3} alt="" />
+![3](/images/blog/2016-05-02-cross-bar-and-clos-networks/3.png)
+
 
 The previous image underlines the analogy between city connections and the cross bar network.
  The cities on the left are connected with highways on the left. On the right, in the 
@@ -65,13 +59,14 @@ Clos networks are networks whose topology are based on cross bar networks. Let's
 switchboard phone operator from before as a crossbar network. They have calls coming in and 
 have to connect the incoming call to the line the customer wants to reach.
 
-<Image src={img4} alt="" />
+![4](/images/blog/2016-05-02-cross-bar-and-clos-networks/4.png)
 
 Now, if a lot of calls come in, the operator will be completely overwhelmed 
 and will not be able to connect all the calls. The idea here is that we are 
 going to multiply the number of operators to answer the demand.
 
-<Image src={img5} alt="" />
+![5](/images/blog/2016-05-02-cross-bar-and-clos-networks/5.png)
+
 
 The result of the previous design is that now incoming lines and outgoing
  lines are linked with a particular operator. So that if you want
@@ -79,7 +74,7 @@ The result of the previous design is that now incoming lines and outgoing
 
 To fix that design flaw we will add one layer of operators.
 
-<Image src={img6} alt="" />
+![6](/images/blog/2016-05-02-cross-bar-and-clos-networks/6.png)
 
 Now that we have 2 layers of operators everybody can contact anybody in the network. 
 However, there is still one big downside to the system. 2 people linked to the same 
@@ -88,7 +83,8 @@ There is only one line available between an ingress operator and an egress opera
 
 Fortunately though, adding another layer of operators will also solve that problem.
 
-<Image src={img7} alt="" />
+![7](/images/blog/2016-05-02-cross-bar-and-clos-networks/7.png)
+
 
 Now, each ingress is connected exactly once to all the middle operators. 
 All the middle operators are connected to all the ingress and egress operators. 

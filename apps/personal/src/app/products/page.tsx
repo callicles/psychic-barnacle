@@ -1,4 +1,5 @@
 import {products} from '../products/products'
+import Image from 'next/image'
 
 export  default function Products() {
     return (
@@ -15,7 +16,7 @@ export  default function Products() {
             </div>
             <p className="mt-1 text-sm text-gray-500">{product.summary}</p>
           </div>
-          <img className="h-10 w-10 flex-shrink-0" src={product.icon} alt="" />
+          <Image className="h-10 w-10 flex-shrink-0" src={product.icon} alt="" />
         </div>
       </li>
       </a>

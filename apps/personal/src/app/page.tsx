@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
+import { Inter } from "next/font/google"
 import clsx from 'clsx'
 
 import image1 from '../../public/images/photos/image_1.jpg'
