@@ -25,6 +25,7 @@ importers:
       '@types/node': 18.11.18
       '@types/react': ^18.0.17
       '@types/react-dom': ^18.0.6
+      '@vercel/analytics': ^1.0.1
       autoprefixer: ^10.4.13
       clsx: ^1.2.1
       fast-glob: ^3.2.12
@@ -48,6 +49,7 @@ importers:
       '@mdx-js/react': 2.3.0_react@18.2.0
       '@next/mdx': 13.4.9_msthxdjvrhmdkfpqqalumiidgq
       '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.4
+      '@vercel/analytics': 1.0.1
       clsx: 1.2.1
       fast-glob: 3.2.12
       next: 13.4.9_biqbaboplfbrettd7655fr4n2y
@@ -617,6 +619,10 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.48.2
       eslint-visitor-keys: 3.3.0
+    dev: false
+
+  /@vercel/analytics/1.0.1:
+    resolution: {integrity: sha512-Ux0c9qUfkcPqng3vrR0GTrlQdqNJ2JREn/2ydrVuKwM3RtMfF2mWX31Ijqo1opSjNAq6rK76PwtANw6kl6TAow==}
     dev: false
 
   /@webassemblyjs/ast/1.11.1:
