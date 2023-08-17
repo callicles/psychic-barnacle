@@ -1,13 +1,14 @@
-import { ArticleLayout } from 'src/components/ArticleLayout'
+import { ArticleLayout } from "src/components/ArticleLayout";
 
 export const meta = {
-  author: 'Nicolas Joseph',
-  date: '2015-08-20',
-  title: 'Angular performance extension development guide',
-  description: 'This blog post discusses the folder structure, build process, and extension architecture of a Chrome extension for monitoring AngularJS performance. The blog post also explains the extension\'s architecture and the role of the devtools page, content-script, and background page. The blog post provides resources for further reading on Chrome extension development.',
-}
+  author: "Nicolas Joseph",
+  date: "2015-08-20",
+  title: "Angular performance extension development guide",
+  description:
+    "This blog post discusses the folder structure, build process, and extension architecture of a Chrome extension for monitoring AngularJS performance. The blog post also explains the extension's architecture and the role of the devtools page, content-script, and background page. The blog post provides resources for further reading on Chrome extension development.",
+};
 
-export default (props) => <ArticleLayout meta={meta} {...props} />
+export default (props) => <ArticleLayout meta={meta} {...props} />;
 
 [Angular performance](https://github.com/Linkurious/angular-performance) is a chrome extension I developed while working for [Linkurious](http://linkurio.us) to get concrete performance metrics about any angular application. As of now, I try to maintain it on my free time, which I don't have that much since I am also working on another open source project called [GitRank](https://github.com/gitlinks/github-rank-project) and is enrolled in a master engineering degree at Cornell Tech. As a consequence, I am trying to make it easier for anyone to make pull requests and try to fix or improve stuff in the extension by providing this guide.
 

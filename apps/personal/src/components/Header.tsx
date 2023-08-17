@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
+import { Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
   ChartBarIcon,
@@ -9,22 +9,25 @@ import {
   CursorArrowRaysIcon,
   ShieldCheckIcon,
   Squares2X2Icon,
-} from '@heroicons/react/24/outline'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import Image from 'next/image'
-import { products } from '../app/products/products'
+} from "@heroicons/react/24/outline";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import Image from "next/image";
+import { products } from "../app/products/products";
 const callsToAction = [
-  { name: 'View All Products', href: '/products', icon: CheckCircleIcon },
-]
+  { name: "View All Products", href: "/products", icon: CheckCircleIcon },
+];
 
 function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export function Header() {
   return (
     <Popover className="relative bg-white">
-      <div className="pointer-events-none absolute inset-0 z-30 shadow" aria-hidden="true" />
+      <div
+        className="pointer-events-none absolute inset-0 z-30 shadow"
+        aria-hidden="true"
+      />
       <div className="relative z-20">
         <div className="mx-auto flex max-w-7xl items-center justify-between py-5 px-6 sm:py-4 md:justify-start md:space-x-10 lg:px-8">
           <div>
@@ -50,15 +53,15 @@ export function Header() {
                   <>
                     <Popover.Button
                       className={classNames(
-                        open ? 'text-gray-900' : 'text-gray-500',
-                        'group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
+                        open ? "text-gray-900" : "text-gray-500",
+                        "group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2",
                       )}
                     >
                       <span>Products</span>
                       <ChevronDownIcon
                         className={classNames(
-                          open ? 'text-gray-600' : 'text-gray-400',
-                          'ml-2 h-5 w-5 group-hover:text-gray-500'
+                          open ? "text-gray-600" : "text-gray-400",
+                          "ml-2 h-5 w-5 group-hover:text-gray-500",
                         )}
                         aria-hidden="true"
                       />
@@ -84,13 +87,23 @@ export function Header() {
                               <div className="flex md:h-full lg:flex-col">
                                 <div className="flex-shrink-0">
                                   <div className="inline-flex h-10 w-10 items-center justify-center sm:h-12 sm:w-12 relative">
-                                    <Image src={item.icon} fill={true} aria-hidden="true" className="p-1" alt={`${item.name} Product Logo`} />
+                                    <Image
+                                      src={item.icon}
+                                      fill={true}
+                                      aria-hidden="true"
+                                      className="p-1"
+                                      alt={`${item.name} Product Logo`}
+                                    />
                                   </div>
                                 </div>
                                 <div className="ml-4 md:flex md:flex-1 md:flex-col md:justify-between lg:ml-0 lg:mt-4">
                                   <div>
-                                    <p className="text-base font-medium text-gray-900">{item.name}</p>
-                                    <p className="mt-1 text-sm text-gray-500">{item.summary}</p>
+                                    <p className="text-base font-medium text-gray-900">
+                                      {item.name}
+                                    </p>
+                                    <p className="mt-1 text-sm text-gray-500">
+                                      {item.summary}
+                                    </p>
                                   </div>
                                   <p className="mt-2 text-sm font-medium text-indigo-600 lg:mt-4">
                                     Learn more
@@ -109,7 +122,10 @@ export function Header() {
                                   href={item.href}
                                   className="-m-3 flex items-center rounded-md p-3 text-base font-medium text-gray-900 hover:bg-gray-100"
                                 >
-                                  <item.icon className="h-6 w-6 flex-shrink-0 text-gray-400" aria-hidden="true" />
+                                  <item.icon
+                                    className="h-6 w-6 flex-shrink-0 text-gray-400"
+                                    aria-hidden="true"
+                                  />
                                   <span className="ml-3">{item.name}</span>
                                 </a>
                               </div>
@@ -121,13 +137,22 @@ export function Header() {
                   </>
                 )}
               </Popover>
-              <a href="/blog" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              <a
+                href="/blog"
+                className="text-base font-medium text-gray-500 hover:text-gray-900"
+              >
                 Blog
               </a>
-              <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
-                Readings
+              <a
+                href="/readings"
+                className="text-base font-medium text-gray-500 hover:text-gray-900"
+              >
+                Reading
               </a>
-              <a href="#" className="text-base font-medium text-gray-500 hover:text-gray-900">
+              <a
+                href="#"
+                className="text-base font-medium text-gray-500 hover:text-gray-900"
+              >
                 About
               </a>
             </Popover.Group>
@@ -135,5 +160,5 @@ export function Header() {
         </div>
       </div>
     </Popover>
-  )
+  );
 }

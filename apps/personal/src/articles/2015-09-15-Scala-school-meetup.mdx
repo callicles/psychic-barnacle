@@ -1,13 +1,14 @@
-import { ArticleLayout } from 'src/components/ArticleLayout'
+import { ArticleLayout } from "src/components/ArticleLayout";
 
 export const meta = {
-  author: 'Nicolas Joseph',
-  date: '2015-09-15',
-  title: 'Scala School september 2015 Meetups',
-  description: 'The blog post describes my experience at the New York scala school, where I learned about linked list methods and some scala concepts. I highlight the use of sealed traits, which restricts the traits to be extended only within the same file, and provides benefits such as allowing the compiler to check for exhaustive pattern matches. The blog post provides an example implementation of sealed traits and showcases the benefits of using them. The post also provides a skeleton implementation of linked list methods, including length, sum, map, filter, append, and reverse, and asks readers to implement these methods.',
-}
+  author: "Nicolas Joseph",
+  date: "2015-09-15",
+  title: "Scala School september 2015 Meetups",
+  description:
+    "The blog post describes my experience at the New York scala school, where I learned about linked list methods and some scala concepts. I highlight the use of sealed traits, which restricts the traits to be extended only within the same file, and provides benefits such as allowing the compiler to check for exhaustive pattern matches. The blog post provides an example implementation of sealed traits and showcases the benefits of using them. The post also provides a skeleton implementation of linked list methods, including length, sum, map, filter, append, and reverse, and asks readers to implement these methods.",
+};
 
-export default (props) => <ArticleLayout meta={meta} {...props} />
+export default (props) => <ArticleLayout meta={meta} {...props} />;
 
 Today I was at the at the New York scala school, we had some fun time implementing linked list methods. The idea was to give some introductions to some of the scala concepts.
 

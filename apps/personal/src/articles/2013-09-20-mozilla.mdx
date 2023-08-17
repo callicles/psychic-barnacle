@@ -1,13 +1,14 @@
-import { ArticleLayout } from 'src/components/ArticleLayout'
+import { ArticleLayout } from "src/components/ArticleLayout";
 
 export const meta = {
-  author: 'Nicolas Joseph',
-  date: '2013-09-20',
-  title: 'OWASP Paris meeting – Firefox OS',
-  description: 'The article describes an OWASP meeting hosted by Mozilla in Paris, where the main topic of discussion was Firefox OS. The OS is entirely based on web technologies like Javascript, HTML, and CSS, which raises several security concerns. The article explains the three-layered permission system of the OS, with apps only given access to necessary APIs, and a root level with system applications that cannot be accessed by developers. Mozilla also developed an activity system to access services like SMS or call without compromising security. The article highlights the two types of app packaging in Firefox OS, full packaged apps and hosted apps, and concludes by inviting contributors to test, review, or contribute to the project, which is entirely open-source.',
-}
+  author: "Nicolas Joseph",
+  date: "2013-09-20",
+  title: "OWASP Paris meeting – Firefox OS",
+  description:
+    "The article describes an OWASP meeting hosted by Mozilla in Paris, where the main topic of discussion was Firefox OS. The OS is entirely based on web technologies like Javascript, HTML, and CSS, which raises several security concerns. The article explains the three-layered permission system of the OS, with apps only given access to necessary APIs, and a root level with system applications that cannot be accessed by developers. Mozilla also developed an activity system to access services like SMS or call without compromising security. The article highlights the two types of app packaging in Firefox OS, full packaged apps and hosted apps, and concludes by inviting contributors to test, review, or contribute to the project, which is entirely open-source.",
+};
 
-export default (props) => <ArticleLayout meta={meta} {...props} />
+export default (props) => <ArticleLayout meta={meta} {...props} />;
 
 This Monday I was at the OWASP meeting for the first time. It was hosted at the Mozilla France quarters
 in Paris, in Montmartre Street.

@@ -1,13 +1,14 @@
-import { ArticleLayout } from 'src/components/ArticleLayout'
+import { ArticleLayout } from "src/components/ArticleLayout";
 
 export const meta = {
-  author: 'Nicolas Joseph',
-  date: '2014-09-02',
-  title: 'How to use Jetpack modules in a Firefox bootstraped extension',
-  description: 'The article discusses how to use jetpack SDK modules in a Firefox bootstrap extension. It explains how to get the CommonJs jetpack loader, configure it to load jetpack modules, and use it. The article also mentions some considerations when using jetpack modules in a Firefox bootstrap extension, including timing and initialization issues.',
-}
+  author: "Nicolas Joseph",
+  date: "2014-09-02",
+  title: "How to use Jetpack modules in a Firefox bootstraped extension",
+  description:
+    "The article discusses how to use jetpack SDK modules in a Firefox bootstrap extension. It explains how to get the CommonJs jetpack loader, configure it to load jetpack modules, and use it. The article also mentions some considerations when using jetpack modules in a Firefox bootstrap extension, including timing and initialization issues.",
+};
 
-export default (props) => <ArticleLayout meta={meta} {...props} />
+export default (props) => <ArticleLayout meta={meta} {...props} />;
 
 I recently worked on a firebug extension. As such it is also a Firefox bootstrap extension.
 However, I needed some of the modules provided by the jetpack SDK and here is how I used it.
@@ -20,31 +21,31 @@ load jetpack modules. This should be done inside the bootstrap.js file
 ```js
 // Get the loader
 let { Loader } = Components.utils.import(
-  'resource://gre/modules/commonjs/toolkit/loader.js',
-  {}
-)
+  "resource://gre/modules/commonjs/toolkit/loader.js",
+  {},
+);
 
 // Instanciate it with the correct options
 let loader = Loader.Loader({
   paths: {
-    'sdk/': 'resource://gre/modules/commonjs/sdk/',
-    '': 'resource://gre/modules/commonjs/',
+    "sdk/": "resource://gre/modules/commonjs/sdk/",
+    "": "resource://gre/modules/commonjs/",
   },
   modules: {
-    'toolkit/loader': Loader,
-    '@test/options': {},
+    "toolkit/loader": Loader,
+    "@test/options": {},
   },
   resolve: function (id, base) {
-    if (id == 'chrome' || id.startsWith('@')) return id
-    return Loader.resolve(id, base)
+    if (id == "chrome" || id.startsWith("@")) return id;
+    return Loader.resolve(id, base);
   },
-})
+});
 
 // Here you configure the requirer id and URI. The URI can be the chrome root of your addOn.
-let requirer = Loader.Module('main', 'chrome://URItoRequire')
+let requirer = Loader.Module("main", "chrome://URItoRequire");
 
 // Finaly you get the corresponding require to use to load jetpack modules.
-let require = Loader.Require(loader, requirer)
+let require = Loader.Require(loader, requirer);
 ```
 
 ## Use it
@@ -61,17 +62,17 @@ that very same module, you will probably end up having unusual behaviour.
 One of those module is the window module which is needed by the page-worker module.
 
 ```js
-const { ready } = require('sdk/addon/window')
+const { ready } = require("sdk/addon/window");
 
 ready.then(
   function onfullFill() {
     // load the module after init
-    let pageWorkerBuilder = require('sdk/page-worker')
+    let pageWorkerBuilder = require("sdk/page-worker");
   },
   function onRejection(rejection) {
     // Do something here if init failed.
-  }
-)
+  },
+);
 ```
 
 Thanks to ZERO for helping out with this.
