@@ -1,5 +1,6 @@
 import { getAllArticles, getArticleBySlug } from "@/lib/blog";
 import { ParsedUrlQuery } from "querystring";
+import "katex/dist/katex.min.css";
 
 interface Params extends ParsedUrlQuery {
   slug: string;
