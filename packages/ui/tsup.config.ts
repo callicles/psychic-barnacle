@@ -9,11 +9,12 @@ export default defineConfig((options: Options) => ({
   // sourcemap: true,
   // minify: true,
   clean: true,
+  target: "node18",
   external: ["react"],
   esbuildOptions(options) {
     options.banner = {
       js: '"use client"',
-    }
+    };
   },
   ...options,
 }));

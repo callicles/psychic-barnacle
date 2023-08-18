@@ -12,7 +12,9 @@
       "outputs": []
     },
     "dev": {
-      "cache": false
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["^dev"]
     }
   },
   "globalEnv": ["FAUNA_SECRET", "DISCORD_ID", "DISCORD_SECRET"]
