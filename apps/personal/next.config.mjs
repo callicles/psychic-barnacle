@@ -3,12 +3,13 @@ import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
 import rehypePrism from "@mapbox/rehype-prism";
 import remarkImages from "remark-images";
-import rehypeKatex from 'rehype-katex'
+import rehypeKatex from "rehype-katex";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ["ts", "tsx", "mdx"],
   reactStrictMode: true,
+  transpilePackages: ["ui"],
   experimental: {
     appDir: true,
     // mdxRs: true,
@@ -20,6 +21,12 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "picsum.photos",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "m.media-amazon.com",
         port: "",
         pathname: "/**",
       },
