@@ -84,10 +84,10 @@ export default function Products() {
 
       <p className="mt-1 text-sm leading-6 text-gray-600">
         This is a list of books that I recommend to engineers at different
-        levels of their career. I've read all of these books and found them to
-        be helpful. I hope you find them helpful too! This is based on a rather
-        simple model of career progression, but should be a good starting point
-        for most people. If you have any suggestions, please let me know!
+        levels of their career. I&apos;ve read all of these books and found them
+        to be helpful. I hope you find them helpful too! This is based on a
+        rather simple model of career progression, but should be a good starting
+        point for most people. If you have any suggestions, please let me know!
       </p>
 
       <p className="mt-4 text-sm leading-6 text-gray-600">
