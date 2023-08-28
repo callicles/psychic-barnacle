@@ -26,7 +26,9 @@ export default function Products() {
                 <Image
                   className="h-10 w-10 flex-shrink-0"
                   src={product.icon}
-                  alt=""
+                  alt="Logo"
+                  width={100}
+                  height={100}
                 />
               </div>
             </li>
