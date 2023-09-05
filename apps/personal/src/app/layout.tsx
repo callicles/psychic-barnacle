@@ -10,13 +10,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="min-h-screen relative">
         <Header />
-        <div>
+        <div className="pb-30">
           {children}
           <Analytics />
         </div>
-        <Footer />
+        <Footer className="absolute bottom-0 w-screen h-30" />
       </body>
     </html>
   );
