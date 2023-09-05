@@ -169,7 +169,7 @@ export function Header() {
                   >
                     Readings
                   </a>
-                  <a
+                  {/* <a
                     href="#"
                     className={
                       "inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium " +
@@ -179,7 +179,7 @@ export function Header() {
                     }
                   >
                     About
-                  </a>
+                  </a> */}
                 </div>
               </div>
               <div className="-mr-2 flex items-center sm:hidden">
@@ -248,7 +248,7 @@ export function Header() {
               >
                 Readings
               </Disclosure.Button>
-              <Disclosure.Button
+              {/* <Disclosure.Button
                 as="a"
                 href="#"
                 className={
@@ -259,7 +259,7 @@ export function Header() {
                 }
               >
                 About
-              </Disclosure.Button>
+              </Disclosure.Button> */}
             </div>
           </Disclosure.Panel>
         </>
