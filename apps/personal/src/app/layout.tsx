@@ -12,7 +12,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <div className="">
+        <div>
           {children}
           <Analytics />
         </div>
