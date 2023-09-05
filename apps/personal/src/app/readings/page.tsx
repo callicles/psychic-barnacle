@@ -40,21 +40,24 @@ function getRecommendedBooks(
 function BookCard(book: Book) {
   return (
     <div className="flex mb-8">
-      <Image
-        src={book.pictureUrl}
-        alt={`Book Cover for ${book.title}`}
-        width={100}
-        height={100}
-        className="object-cover rounded h-32 w-32 flex-none"
-      />
+      <div className="w-32 flex-none">
+        <Image
+          src={book.pictureUrl}
+          alt={`Book Cover for ${book.title}`}
+          width={100}
+          height={100}
+          className="object-cover rounded h-32 w-32 flex-none"
+        />
+        <BuyWithAmazonButton amazonLink={book.amazonLink} />
+      </div>
+
       <div className="pl-4 pr-4 flex-auto min-w-0">
         <div className="flex justify-between">
-          <p className="flex-1 text-indigo-600 text-lg text-ellipsis overflow-hidden whitespace-nowrap pr-2">
+          <p className="flex-1 text-indigo-600 text-lg text-ellipsis lg:overflow-hidden lg:whitespace-nowrap pr-2">
             {book.title}
           </p>
-          <BuyWithAmazonButton amazonLink={book.amazonLink} />
         </div>
-        <p className="text-slate-500 text-sm mb-2 text-ellipsis overflow-hidden whitespace-nowrap">
+        <p className="text-slate-500 text-sm mb-2 text-ellipsis lg:overflow-hidden lg:whitespace-nowrap">
           {book.author}
         </p>
         <p className="text-sm text-justify leading-6 text-gray-600">
@@ -121,7 +124,7 @@ export default function Products() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-4 mt-16">
+      <div className="grid md:grid-cols-2 md:gap-4 sm:grid-cols-1 mt-16">
         <div>
           <h3 className="text-xl font-bold mb-5">{job.label}</h3>
           {currentRecommendations.map((book) => (

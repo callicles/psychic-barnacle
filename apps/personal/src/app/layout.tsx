@@ -10,13 +10,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="min-h-screen relative">
+      <body className="min-h-screen flex flex-col">
         <Header />
-        <div className="pb-30">
+        <div className="grow">
           {children}
           <Analytics />
         </div>
-        <Footer className="absolute bottom-0 w-screen h-30" />
+        <Footer className="w-screen" />
       </body>
     </html>
   );

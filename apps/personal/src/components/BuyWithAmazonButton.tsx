@@ -4,7 +4,7 @@ import amazonIcon from "../../public/images/logos/amazon.svg";
 
 export const BuyWithAmazonButton = ({ amazonLink }: { amazonLink: string }) => {
   return (
-    <Button>
+    <Button className="w-full mt-2 pt-2 pb-2">
       <a target="_blank" href={amazonLink}>
         <Image
           src={amazonIcon}
